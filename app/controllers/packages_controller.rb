@@ -1,5 +1,6 @@
 class PackagesController < ApplicationController
   def dependencies
-    render json: {}
+    dependencies = PackagesFetcher.fetch(params[:id])
+    render json: dependencies.as_json
   end
 end

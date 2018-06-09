@@ -1,24 +1,27 @@
-# README
+# YARA
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+YARA - Yet Another REST API application.
 
-Things you may want to cover:
+### Functionallity
 
-* Ruby version
+Fetches dependencies for node.js pakages.
 
-* System dependencies
+### Install
 
-* Configuration
+```
+git clone https://github.com/shiroginne/yara
+cd yara
+bundle install
+```
 
-* Database creation
+### Usage
 
-* Database initialization
+Run the server
+```
+rails s
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Send JSON requests
+```
+curl -H "Content-Type: application/json" -X GET localhost:3000/packages/forever/dependencies
+```
